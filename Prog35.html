@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+	function myfun()
+	{
+		var data=document.getElementById("t1").value;
+		var atpos=data.indexOf("@");
+		var dotpos=data.lastIndexOf(".");	
+		if((atpos<=0)||(dotpos<atpos+2)||(data.length<dotpos+2))
+			alert("Invalid Email Format..");
+		else
+			document.getElementById("p1").innerHTML="Email Correct";	
+	}
+</script>
+</head>
+<body>
+	Email ID <input type="text" id="t1">
+	<input type="submit" onclick="myfun()" value="Validate Email">
+	<p id="p1"></p>
+</body>
+</html>
